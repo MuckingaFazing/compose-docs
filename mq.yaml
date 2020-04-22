@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+
+  ibmmq:
+      image: ibmcom/mq:latest
+      ports:
+        - 1414:1414
+        - 9443:9443
+      volumes:
+        - qm1data:/mnt/mqm
+      environment:
+        LICENSE: accept
+        MQ_QMGR_NAME: QM1
+      networks:
+        - app_tier
+
+volumes:
+  qm1data:
+    driver: local  # is already local by default
+
+
+networks:
+  app_tier:
+    driver: bridge
+
+
+
+
+
+
+
