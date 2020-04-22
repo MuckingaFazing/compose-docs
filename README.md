@@ -1,7 +1,7 @@
-# compose-docs
+# Docker-Compose Collection
 This is a repository for docker-compose files
 
-Command to execute:
+# Command to execute:
 
 docker-compose -f *file_name* up
 
