@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  odm:
+    image: ibmcom/odm:latest
+    ports:
+      - 9060:9060
+      - 9444:9444
+    environment:
+      LICENSE: accept
+
+networks:
+  app_tier:
+    driver: bridge
